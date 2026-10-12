@@ -1,0 +1,4 @@
+Proyecto 8 (chunking)
+
+-- Instalar ependencias del proyecto
+     pip install supabase sentence-transformers python-dotenv

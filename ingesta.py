@@ -59,8 +59,31 @@ def main():
     chunks = dividir_chunks(texto)
     print(f"Fragmentos realizados: {len(chunks)}")
 
-    for e in chunks:
-        print(e)
+    # for e in chunks:
+    #     print(e ['content'])
+
+    # Generar los embeddings
+    embeddings = modelo.encode([c['content'] for c in chunks])
+
+    # Formar una lista de registros (mas rapido que de uno a uno)
+    filas = [
+        {
+            "archivo": ARCHIVO,
+            "capitulo": c['capitulo'],
+            "articulo": c['articulo'],
+            "content": c['content'],
+            "embedding": emb.tolist()
+        }
+        for c,emb in zip(chunks, embeddings) # Zip sirve para agrupar iterables
+    ]
+
+    # Eliminar todos los registros de la base de datos
+    supabase.table(TABLA).delete().eq("archivo", ARCHIVO).execute()
+
+    # Agregar a la base de datos
+    supabase.table(TABLA).insert(filas).execute()
+
+    print(f"Se insertaron {len(filas)} registros en la base de datos")
 
 if __name__ == '__main__':
     main()

@@ -13,6 +13,7 @@ Por ejemplo, de 0 a 100, 50 a 150, 100 a 200, 150 a 250, etc.
 
 ## Golden Set
 Preguntas sin respuesta: 8 y 20
+```markdown
     "¿Cuántos días de vacaciones tengo al cumplir tres años laborando?",
     "¿Cuando se realiza el depósito de la gratificación anual de fin de año?",
     "En caso del fallecimiento de un familiar, ¿cuántos días de permiso con goce tengo?",
@@ -26,6 +27,7 @@ Preguntas sin respuesta: 8 y 20
     "¿Cuántos días libres con goce de salario corresponden por contraer nupcias?",
     "¿Cuál es el monto mensual que otorga la empresa para cubrir gastos en esquema remoto?",
     "¿Existe alguna restricción sobre el uso de smartphones durante las horas laborales?"
+```
 
 ## Guía de instalación
 Abrir una terminal (CMD o Git Bash) y navegar hasta la ruta deseada

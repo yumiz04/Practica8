@@ -1,20 +1,31 @@
 # Practica 8 (Chunking)
 
-La idea general es hacer el chunking por número de renglones,
-'4' por cada chunk, sin solapar.
+## Dirección del proyecto
+La idea general del chunking es comparar dos enfoques distintos:
 
-La segunda idea es hacer chunks por palabras, '100' palabras
-por cada chunk, con solapamientos. La idea para esto es tomar
-inicialmente 100 palabras para el primer chunk, el segundo
-chunk comprenderá desde (100 - 50) hasta 200, el tercero desde
-(200 - 50) hasta 300, y así sucesivamente.
+El primer enfoque es hacer el chunking por número de renglones,
+'4' por cada chunk, sin solapamiento.
 
-## Preguntas de ejemplo
-    "¿Cuántos días de vacaciones me tocan después de 3 años?",
-    "¿Cuándo me pagan el aguinaldo?",
-    "¿Puedo trabajar desde mi casa?",
-    "¿Cuántos minutos tengo para llegar tarde?",
-    "Falleció un familiar, ¿Qué puedo hacer?"
+El segundo enfoque es hacer chunks por número de palabras con un
+margen de solapamiento. En concreto de '100' palabras por cada
+chunk. La idea es tener una ventana de '100' con pasos de '50':
+Por ejemplo, de 0 a 100, 50 a 150, 100 a 200, 150 a 250, etc.
+
+## Golden Set
+Preguntas sin respuesta: 8 y 20
+    "¿Cuántos días de vacaciones tengo al cumplir tres años laborando?",
+    "¿Cuando se realiza el depósito de la gratificación anual de fin de año?",
+    "En caso del fallecimiento de un familiar, ¿cuántos días de permiso con goce tengo?",
+    "¿Tengo la posibilidad de trabajar a distancia desde mi hogar?",
+    "Si acumulo retrasos de forma constante, ¿cuáles son las consecuencias?",
+    "¿Cómo se retribuye económicamente si presto mis servicios durante un día festivo?",
+    "¿Es factible monetizar los días de vacaciones en lugar de disfrutarlos físicamente?",
+    "¿Cuál es el código de vestimenta para asistir de forma presencial a las oficinas?",
+    "¿Cuál es el margen de tolerancia permitido al llegar al corporativo?",
+    "Si muere un pariente cercano, ¿cuál es el procedimiento y plazo para notificarlo?",
+    "¿Cuántos días libres con goce de salario corresponden por contraer nupcias?",
+    "¿Cuál es el monto mensual que otorga la empresa para cubrir gastos en esquema remoto?",
+    "¿Existe alguna restricción sobre el uso de smartphones durante las horas laborales?"
 
 ## Guía de instalación
 Abrir una terminal (CMD o Git Bash) y navegar hasta la ruta deseada

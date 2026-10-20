@@ -18,21 +18,36 @@ chunk comprenderá desde (100 - 50) hasta 200, el tercero desde
 
 ## Guía de instalación
 Abrir una terminal (CMD o Git Bash) y navegar hasta la ruta deseada
-    cd Practicas
+```bash
+cd Practicas
+```
 
 Clonar el repo
-    git clone https://github.com/yumiz04/Practica8.git
+```bash
+git clone https://github.com/yumiz04/Practica8.git
+```
 
+Entrar a la carpeta del proyecto
+```bash
 cd Practica8
+```
 
 Crear el entorno virtual de Python
-    python -m venv venv
+```bash
+python -m venv venv
+```
 
 Abrir VS Code
-    code .
+```bash
+code .
+```
 
 Activar el entorno virtual (si no está activo)
-    .\venv\Scripts\activate
+```bash
+.\venv\Scripts\activate
+```
 
 Instalar ependencias del proyecto
-    pip install supabase sentence-transformers python-dotenv
+```bash
+pip install supabase sentence-transformers python-dotenv
+```

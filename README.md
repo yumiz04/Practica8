@@ -1,4 +1,4 @@
-# Practica8
+# Practica 8 (Chunking)
 
 La idea general es hacer el chunking por número de renglones,
 '4' por cada chunk, sin solapar.
@@ -15,3 +15,24 @@ chunk comprenderá desde (100 - 50) hasta 200, el tercero desde
     "¿Puedo trabajar desde mi casa?",
     "¿Cuántos minutos tengo para llegar tarde?",
     "Falleció un familiar, ¿Qué puedo hacer?"
+
+## Guía de instalación
+Abrir una terminal (CMD o Git Bash) y navegar hasta la ruta deseada
+    cd Practicas
+
+Clonar el repo
+    git clone https://github.com/yumiz04/Practica8.git
+
+cd Practica8
+
+Crear el entorno virtual de Python
+    python -m venv venv
+
+Abrir VS Code
+    code .
+
+Activar el entorno virtual (si no está activo)
+    .\venv\Scripts\activate
+
+Instalar ependencias del proyecto
+    pip install supabase sentence-transformers python-dotenv

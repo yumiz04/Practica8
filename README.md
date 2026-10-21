@@ -11,10 +11,20 @@ margen de solapamiento. En concreto de '100' palabras por cada
 chunk. La idea es tener una ventana de '100' con pasos de '50':
 Por ejemplo, de 0 a 100, 50 a 150, 100 a 200, 150 a 250, etc.
 
+Se mantiene el método original de chunking visto en clase. Se le
+llamó por artículo, debido a que segmenta por cada uno.
+
 ## Golden Set
 Preguntas sin respuesta: 8 y 20
 ```markdown
-    "¿Cuántos días de vacaciones tengo al cumplir tres años laborando?",
+    "¿Cuántos días de vacaciones me tocan después de 3 años?",
+    "¿Cuándo me pagan el aguinaldo?",
+    "¿Puedo trabajar desde mi casa?",
+    "Se murió mi tío, ¿me dan permiso?",
+    "¿Cuál es el código de vestimenta?",
+    "¿Cuántos minutos tengo para llegar tarde?",
+    "Falleció un familiar, ¿Qué puedo hacer?",
+    "Llegué tarde varias veces, ¿qué pasa?",
     "¿Cuando se realiza el depósito de la gratificación anual de fin de año?",
     "En caso del fallecimiento de un familiar, ¿cuántos días de permiso con goce tengo?",
     "¿Tengo la posibilidad de trabajar a distancia desde mi hogar?",

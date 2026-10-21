@@ -74,3 +74,17 @@ Instalar ependencias del proyecto
 ```bash
 pip install supabase sentence-transformers python-dotenv
 ```
+
+## Guía de uso
+Ejecutar
+```bash
+python ingesta.py
+```
+Muestra la estrategia de chunking y el número de chunks.
+Cronometra los tiempos de los embeddings en segundos.
+
+```bash
+python bench.py
+```
+Muestra una tabla comparativa de estrategias, modelos,
+Hit@3, MRR, tiempo de ingesta y costo.

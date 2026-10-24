@@ -76,6 +76,11 @@ pip install supabase sentence-transformers python-dotenv
 ```
 
 ## Guía de uso
+> [!WARNING]
+> Necesitará la tabla 'politicas_bench' y un par de funciones,
+> ejecute primero el script sql de la sección [Recursos adicionales](#recursos-adicionales)
+> en el editor sql de supabase antes de continuar.
+
 Ejecutar
 ```bash
 python ingesta.py

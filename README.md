@@ -88,3 +88,42 @@ python bench.py
 ```
 Muestra una tabla comparativa de estrategias, modelos,
 Hit@3, MRR, tiempo de ingesta y costo.
+
+## Recursos adicionales
+Ejecutar en el SQL Editor de Supabase
+```markdown
+create extension if not exists vector;
+
+create table if not exists politicas_bench (
+  id bigserial primary key,
+  archivo text,
+  estrategia text,          -- 'articulo' | 'renglones' | 'palabras'
+  capitulo text,
+  articulo text,
+  content text,
+  emb_minilm vector(384),   -- all-MiniLM-L6-v2
+  emb_bge vector(1024)      -- BAAI/bge-m3
+);
+
+create or replace function buscar_minilm(
+  query_embedding vector(384), estrategia_f text, match_count int)
+returns table (id bigint, content text, articulo text, similarity float)
+language sql stable as $$
+  select id, content, articulo, 1 - (emb_minilm <=> query_embedding) as similarity
+  from politicas_bench
+  where estrategia = estrategia_f
+  order by emb_minilm <=> query_embedding
+  limit match_count;
+$$;
+
+create or replace function buscar_bge(
+  query_embedding vector(1024), estrategia_f text, match_count int)
+returns table (id bigint, content text, articulo text, similarity float)
+language sql stable as $$
+  select id, content, articulo, 1 - (emb_bge <=> query_embedding) as similarity
+  from politicas_bench
+  where estrategia = estrategia_f
+  order by emb_bge <=> query_embedding
+  limit match_count;
+$$;
+```
